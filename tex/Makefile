@@ -19,4 +19,4 @@ notes.pdf:
 clean:
 	rm -f *.pyg *.lot *.lof *.lol *.toc *.log *.out *.aux *.blg *.bbl config/*aux paper.bib *.brf
 
-rebuild: clean paper.pdf final clean
+build: clean paper.pdf final clean
