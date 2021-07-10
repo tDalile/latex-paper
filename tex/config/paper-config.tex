@@ -1,0 +1,99 @@
+\documentclass[a4paper, 10pt]{article}
+
+% ============================================  USERSETTINGS  ==========================================
+
+\newcommand{\myTitle}{Small \LaTeX{} Article Template\xspace}
+\newcommand{\mySubtitle}{Subtitle\xspace}
+\newcommand{\myDegree}{Degree\xspace}
+\newcommand{\myName}{First Name Last Name\xspace}
+\newcommand{\myProf}{Prof. Name\xspace}
+\newcommand{\myOtherProf}{Prof. Name\xspace}
+\newcommand{\mySupervisor}{Supervisor Name\xspace}
+\newcommand{\myFaculty}{Faculty of Computer Science and Engineering\xspace}
+\newcommand{\myDepartment}{Department\xspace}
+\newcommand{\myUni}{University\xspace}
+\newcommand{\myLocation}{Location, Country\xspace}
+\newcommand{\myTime}{\today\xspace}
+\newcommand{\myVersion}{version 1.0\xspace}
+
+% === USERSETTINGS FORMATTING: TITLE === 
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{\myTitle}} % Article title
+
+\author{
+\large
+\textsc{\myName}\\[2mm]
+\normalsize \myUni \\
+\normalsize \myFaculty \\ 
+\normalsize \href{mailto:test@test.com}{test@test.com} % change to your mail
+\vspace{-5mm}
+}
+\date{}
+
+
+% ============================================  PACKAGES  ==============================================
+
+% === TEMPLATE RELATED: Remove in case of usage! ===
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+
+% === %unsorted% ===
+\usepackage{filecontents}
+
+
+% === FONT & LANGUAGE ===
+% \usepackage[ngerman]{babel} % set language
+\usepackage[main=english,ngerman]{babel} % set multi-language document
+
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % needed if Umlauts are used
+\usepackage{xspace} % adds a space unless the macro is followed by certain punctuationcharacters
+
+% === MULTICOLUMN ===
+\usepackage{multicol} 
+
+% === Abstract ===
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+% === SECTIONS ===
+\renewcommand\thesection{\Roman{section}} % sections with roman numerals
+\renewcommand\thesubsection{\Roman{subsection}} % subsections with roman numerals
+%\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % new style of section titles
+%\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % new style of section titles
+
+% === HEADERS & FOOTERS
+%\usepackage{fancyhdr} 
+%\pagestyle{fancy} % set for all pages
+%\fancyhead{} % Blank out the default header
+%\fancyfoot{} % Blank out the default footer
+%\fancyhead[C]{Running title $\bullet$ November 2012 $\bullet$ Vol. XXI, No. 1} % Custom header text
+%\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+% === FIGURES ===
+\usepackage{graphicx}
+
+% === TABLES ===
+\usepackage{booktabs}  % Horizontal rules in tables
+
+% === Algorithms ===
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+% === Hyperlinks ===
+\usepackage[backref=page,hidelinks]{hyperref}
+
+% === FIXES ===
+\newcommand{\theHalgorithm}{\arabic{algorithm}} % hyperref and algorithmic misbehave sometimes
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{paralist} % less space between bullet points
+
+% ============================================  FINETUNING  =============================================
+
+\renewcommand*{\backref}[1]{}
+%\renewcommand*{\backrefalt}[4]{{\footnotesize [%
+%    \ifcase #1 Not cited.%
+%    \or Cited on page~#2%
+%    \else Cited on pages #2%
+%    \fi%
+%]}
