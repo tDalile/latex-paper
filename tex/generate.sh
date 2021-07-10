@@ -1,6 +1,6 @@
 #!/bin/bash
 
-author="DanielAlile"
+author="YOURNAME"
 prefix_version=$(date +"%Y%m%d%H%M")
 prefix_final=$(date +"%Y%m%d")
 folder_versions="../versions"
