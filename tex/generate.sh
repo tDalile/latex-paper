@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# no spaces/special characters
 author="YOURNAME"
 prefix_version=$(date +"%Y%m%d%H%M")
 prefix_final=$(date +"%Y%m%d")
