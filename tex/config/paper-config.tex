@@ -1,4 +1,4 @@
-\documentclass[a4paper, 10pt]{article}
+\documentclass[a4paper, 11pt]{article}
 
 % ============================================  USERSETTINGS  ==========================================
 
@@ -46,10 +46,25 @@
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc} % needed if Umlauts are used
-\usepackage{xspace} % adds a space unless the macro is followed by certain punctuationcharacters
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xspace} % adds a space unless the macro is followed by certain punctuation characters
+
+% === MARGINS ===
+\usepackage[a4paper]{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.4cm,bottom=2cm}%Seitenränder
+\usepackage[onehalfspacing]{setspace}%Zeilenabstand
+\renewcommand{\\}{\vspace*{0.5\baselineskip} \newline}
 
 % === MULTICOLUMN ===
 \usepackage{multicol} 
+
+% === CITATION ===
+\usepackage[
+  backend=biber,
+  citestyle=ieee
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports 
 
 % === Abstract ===
 \usepackage{abstract} % Allows abstract customization
@@ -75,13 +90,17 @@
 
 % === TABLES ===
 \usepackage{booktabs}  % Horizontal rules in tables
+\usepackage{array} % extends tabular
+
+% === ROTATION ===
+\usepackage{rotating}
 
 % === Algorithms ===
 \usepackage{algorithm}
 \usepackage{algorithmic}
 
 % === Hyperlinks ===
-\usepackage[backref=page,hidelinks]{hyperref}
+\usepackage[hidelinks,breaklinks]{hyperref}
 
 % === FIXES ===
 \newcommand{\theHalgorithm}{\arabic{algorithm}} % hyperref and algorithmic misbehave sometimes
@@ -90,7 +109,7 @@
 
 % ============================================  FINETUNING  =============================================
 
-\renewcommand*{\backref}[1]{}
+%\renewcommand*{\backref}[1]{}
 %\renewcommand*{\backrefalt}[4]{{\footnotesize [%
 %    \ifcase #1 Not cited.%
 %    \or Cited on page~#2%
