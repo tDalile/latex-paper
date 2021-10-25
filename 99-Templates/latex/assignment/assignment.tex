@@ -1,0 +1,117 @@
+% ============================================  CONFIGS  ==============================================
+
+\include{config/assignment-config.tex}
+
+% ============================================  DOCUMENT  =============================================
+
+\begin{document}
+
+% ===  TITLEPAGE  ===
+
+\maketitle % makes this a title page
+
+
+
+
+\newpage
+% === TOC ===
+\pagenumbering{roman}
+\tableofcontents \thispagestyle{empty} 
+
+\newpage
+% ===  CONTENT  ===
+\pagenumbering{arabic}
+
+
+
+
+% section
+\section{Introduction}\label{sec:intro}
+\lipsum*[2-3] % remove dummy text
+
+% subsection
+\subsection{Detail}
+
+\begin{compactitem}
+	\item Donec dolor arcu, rutrum id molestie in, viverra sed diam
+	\item Curabitur feugiat
+	\item turpis sed auctor facilisis
+	\item arcu eros accumsan lorem, at posuere mi diam sit amet tortor
+	\item Fusce fermentum, mi sit amet euismod rutrum
+	\item sem lorem molestie diam, iaculis aliquet sapien tortor non nisi
+	\item Pellentesque bibendum pretium aliquet
+\end{compactitem}
+\lipsum[4] % remove dummy text
+
+% paragraph
+\paragraph{Paragraph}
+\lipsum[75]
+
+\begin{description}
+	\item[article\label{article}]{Article is \ldots}
+	\item[book\label{book}]{the book class is \ldots}
+	\item[report\label{report}]{class report does \ldots}
+	\item[letter\label{letter}]{for german letters you should use something else}
+\end{description}
+	
+
+
+
+% citation example
+\section{Citation}\label{sec:cite}
+
+This work~\cite{doe2006test} is great.
+
+% table example
+\section{Tables}\label{sec:tab}
+
+\begin{table}[H]
+	\caption{Example table}
+	\centering
+	\begin{tabular}{llr}
+		\toprule
+		\multicolumn{2}{c}{Name} \\
+		\cmidrule(r){1-2}
+		First name & Last Name & Grade \\
+		\midrule
+		John & Doe & $7.5$ \\
+		Richard & Miles & $2$ \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\lipsum[5] % remove dummy text
+
+
+% figures example
+\section{Figures}\label{sec:fig}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\columnwidth]{assets/figure_rasterized.pdf}
+	\caption{Example of a rasterized plot}
+\end{figure}
+
+\lipsum[6] % remove dummy text
+
+\section{Conclusion}\label{sec:conclusion}
+
+\lipsum[7] % remove dummy text
+\LaTeX{} Example by XYZ~\cite{doe2006test}.
+
+% figures equations
+\section{Equations}\label{sec:eq}
+\begin{equation}
+	\label{eq:emc}
+	e = mc^2
+\end{equation}
+
+
+% ============================================  BIBLIOGRAPHY  ==============================================
+
+\printbibliography
+
+% ==========================================================================================================
+
+
+\end{document}
